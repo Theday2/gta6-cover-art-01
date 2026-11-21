@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Cover Studio — Make Your Sunset Cover</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">☀</span>
+    <div>
+      <h1>VICE COVER STUDIO</h1>
+      <p class="tagline">Turn your photo into a sunset cover poster</p>
+    </div>
+  </div>
+  <div class="top-actions">
+    <label class="btn btn-ghost" for="fileInput">+ Add photos</label>
+    <button id="exportBtn" class="btn btn-primary" type="button">Export PNG ↓</button>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="controls" aria-label="Editor controls">
+    <input id="fileInput" type="file" accept="image/*" multiple hidden>
+
+    <div class="group">
+      <h2>1 · Photos</h2>
+      <p class="hint">Your photos stay on your device — nothing is uploaded.</p>
+      <div id="photoList" class="photo-list"></div>
+      <div class="row">
+        <button id="useSamplesBtn" class="btn btn-small" type="button">Load sample photos</button>
+        <button id="clearPhotosBtn" class="btn btn-small btn-ghost" type="button">Clear</button>
+      </div>
+    </div>
+
+    <div class="group">
+      <h2>2 · Layout</h2>
+      <div class="seg" id="layoutSeg" role="group" aria-label="Panel layout">
+        <button data-layout="1" type="button" class="active">1 panel</button>
+        <button data-layout="2" type="button">2 panels</button>
+        <button data-layout="3" type="button">3 panels</button>
+        <button data-layout="4" type="button">4 panels</button>
+      </div>
+      <label class="field">Active panel
+        <select id="panelSelect"></select>
+      </label>
+      <label class="field">Photo in this panel
+        <select id="panelPhotoSelect"></select>
+      </label>
+      <label class="field">Zoom <span id="zoomVal" class="val">1.0×</span>
+        <input id="zoomRange" type="range" min="1" max="3" step="0.05" value="1">
+      </label>
+      <label class="field">Position X <span id="oxVal" class="val">0</span>
+        <input id="oxRange" type="range" min="-100" max="100" step="1" value="0">
+      </label>
+      <label class="field">Position Y <span id="oyVal" class="val">0</span>
+        <input id="oyRange" type="range" min="-100" max="100" step="1" value="0">
+      </label>
+      <label class="check"><input id="gradeToggle" type="checkbox" checked> Sunset grade on photo</label>
+    </div>
+
+    <div class="group">
+      <h2>3 · Caption</h2>
+      <label class="field">Text
+        <input id="captionInput" type="text" value="SUNSET HEIST" maxlength="40">
+      </label>
+      <label class="field">Style
+        <select id="styleSelect">
+          <option value="sunset" selected>SUNSET — bold orange</option>
+          <option value="neon">NEON — pink / cyan glow</option>
+          <option value="noir">NOIR — white, hard shadow</option>
+        </select>
+      </label>
+      <label class="field">Size <span id="capSizeVal" class="val">Big</span>
+        <input id="capSizeRange" type="range" min="0.5" max="1.6" step="0.05" value="1">
+      </label>
+      <div class="seg" id="posSeg" role="group" aria-label="Caption position">
+        <button data-pos="top" type="button">Top</button>
+        <button data-pos="center" type="button">Middle</button>
+        <button data-pos="bottom" type="button" class="active">Bottom</button>
+      </div>
+      <label class="field">Sub-caption
+        <input id="subInput" type="text" value="VICE CITY · EST. 2026" maxlength="48">
+      </label>
+    </div>
+
+    <div class="group">
+      <h2>4 · Export size</h2>
+      <div class="seg" id="sizeSeg" role="group" aria-label="Export size">
+        <button data-size="1080x1080" type="button">1080 × 1080</button>
+        <button data-size="1080x1350" type="button" class="active">1080 × 1350</button>
+        <button data-size="1920x1080" type="button">1920 × 1080</button>
+      </div>
+      <p class="hint">Square, portrait and landscape — ready for feed, stories and banners.</p>
+    </div>
+  </section>
+
+  <section class="stage" aria-label="Live preview">
+    <div class="preview-wrap">
+      <canvas id="preview" width="1080" height="1350"></canvas>
+    </div>
+    <p class="stage-note">Live preview — what you see is what the PNG looks like.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>100% offline · your photos never leave this device · no logos, no stock art — the sunset, sun and skyline are drawn in code.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
