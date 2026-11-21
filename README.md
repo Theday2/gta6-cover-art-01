@@ -1,8 +1,8 @@
 # gta6-cover-art-01
 
-[![make.fun](https://make.fun/badge/competition/gta6-cover-art-01)](https://make.fun/competitions/gta6-cover-art-01)
-[![make.fun rank](https://make.fun/badge/rank/gta6-cover-art-01)](https://make.fun/competitions/gta6-cover-art-01)
-[![make.fun reward](https://make.fun/badge/reward/gta6-cover-art-01)](https://make.fun/competitions/gta6-cover-art-01)
+[![make.fun · gta6-cover-art-01](https://make.fun/badge/gta6-cover-art-01.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![rank](https://make.fun/badge/gta6-cover-art-01/Theday2/gta6-cover-art-01/rank.svg)](https://make.fun/bounty/gta6-cover-art-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![reward](https://make.fun/badge/gta6-cover-art-01/Theday2/gta6-cover-art-01/reward.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
 
 **VICE COVER STUDIO** — turn your own photo into a striking sunset cover poster, right in the browser. Multi-panel layouts (1/2/3/4), per-panel crop with a different focus point, a bold caption editor (SUNSET / NEON / NOIR), and one-click PNG export at 1080×1080, 1080×1350 or 1920×1080.
 
